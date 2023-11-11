@@ -1,0 +1,31 @@
+import random
+
+def word_guess_game():
+words = ["apple", "banana", "cherry", "orange", "grape", "watermelon"]
+random.shuffle(words) # Shuffle the words to avoid repetition
+score = 0
+
+print("Welcome to the Word Guess Game!")
+
+for word in words:
+hidden_word = "*" * len(word)
+print("Guess the word:", hidden_word)
+
+guess = input("Enter a letter or guess the whole word: ").lower()
+if guess == word:
+print("Correct!")
+score += 1
+elif len(guess) == 1 and guess in word:
+indices = [i for i in range(len(word)) if word[i] == guess]
+for index in indices:
+hidden_word = hidden_word[:index] + guess + hidden_word[index+1:]
+print("Good guess! The word now looks like this:", hidden_word)
+if "*" not in hidden_word:
+print("You've guessed the word!")
+score += 1
+else:
+print("Wrong guess! The word is:", word)
+
+print("Game over! Your final score is:", score)
+
+word_guess_game()

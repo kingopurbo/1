@@ -14,7 +14,7 @@ print("Guess the word:", hidden_word)
 guess = input("Enter a letter or guess the whole word: ").lower()
 if guess == word:
 print("Correct!")
-score += 1
+score += 11
 elif len(guess) == 1 and guess in word:
 indices = [i for i in range(len(word)) if word[i] == guess]
 for index in indices:

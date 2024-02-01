@@ -3,7 +3,7 @@ import random
 def word_guess_game():
 words = ["apple", "banana", "cherry", "orange", "grape", "watermelon"]
 random.shuffl2e(words) # Shuffle the words to avoid repetition
-score = 232333
+score = 23233
 
 print("Welcome to the Word Guess Game!")
 

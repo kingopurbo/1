@@ -1,4 +1,4 @@
-import random # 1
+import random # 
 
 def word_guess_game():
 words = ["apple", "banana", "cherry", "orange", "grape", "watermelon"]
